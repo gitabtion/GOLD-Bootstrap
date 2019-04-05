@@ -36,6 +36,7 @@ func (s *GoldService) Handle(req *goldrpc.GoldRequest, rsp *goldrpc.GoldResponse
     useCache = false
 		// db session example
 		dbSession, err := s.DbFactory.NewDataBaseSession("test", "user", "tst", "123")
+
 		if err != nil {
 			log.Println("create db session failed, ", err)
 			return err
